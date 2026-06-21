@@ -22,7 +22,7 @@ const analyzeComplaint = async () => {
     console.log(token)
     
     const res = await axios.post(
-        `http://127.0.0.1:8000/complaints/predict?text=${complaint}`,
+        `${import.meta.env.VITE_API_URL}/complaints/predict?text=${complaint}`,
         
         null,
         

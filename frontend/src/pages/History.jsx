@@ -4,7 +4,7 @@ export default function History() {
   const [history, setHistory] = useState([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/complaints/history")
+    fetch(`${import.meta.env.VITE_API_URL}/complaints/history`)
       .then((res) => res.json())
       .then((data) => setHistory(data))
       .catch((err) => console.log(err));
